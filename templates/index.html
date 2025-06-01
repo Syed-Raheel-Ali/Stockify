@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="section">
+    <table class="centered-table">
+        <thead>
+            <tr>
+                <th>Stock Symbol</th>
+                <th>Shares Owned</th>
+                <th>Current Pricing</th>
+                <th>Total Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.shares }}</td>
+                <td>{{ stock.price }}</td>
+                <td>{{ stock.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<h3>Current Cash: {{ cash }}</h3>
+<h3>Net Worth: {{ total }}</h3>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="section centered-table">
+    <table class="centered-table">
+        <thead>
+            <tr>
+                <th>Stock Symbol</th>
+                <th>Shares Transacted</th>
+                <th>Current Pricing</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in data %}
+            <tr>
+                <td>{{ element.symbol }}</td>
+                <td>{{ element.shares }}</td>
+                <td>{{ element.price }}</td>
+                <td>{{ element.time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

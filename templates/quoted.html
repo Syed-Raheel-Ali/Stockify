@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Information
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    <table class="centered-table">
+        <thead>
+            <tr>
+                <th>Stock Symbol</th>
+                <th>Stock Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ symbol }}</td>
+                <td>{{ price }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
